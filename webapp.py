@@ -13,8 +13,11 @@ from email.mime.text import MIMEText
 load_dotenv()
 
 # Retrieve the values from the environment
-from_email = os.getenv("EMAIL_USER")  # Load email from .env file
-email_password = os.getenv("EMAIL_PASS")  # Load app password from .env file
+#from_email = os.getenv("EMAIL_USER")  # Load email from .env file
+#email_password = os.getenv("EMAIL_PASS")  # Load app password from .env file
+
+from_email = st.secrets['EMAIL_USER']
+email_password = st.secrets['EMAIL_PASS']
 
 # Hardcoded dictionary to map source filenames to URLs
 source_mapping = {
