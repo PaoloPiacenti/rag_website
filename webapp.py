@@ -190,11 +190,12 @@ st.title("🤖 The Bot Teaching Assistant")
 
 # Introductory paragraph
 st.markdown("""
-**Hello!** Welcome to the Bot Teaching Assistant for the Data Science and AI course.
+**Hello!** Welcome to the Bot Teaching Assistant for the ***Data Science and AI course***.
 This bot has been fine-tuned using all the PDFs from the course, with the goal of helping students easily retrieve course content.
 
-**Author**: Paolo Piacenti, Batch #1758
-[**LinkedIn**](https://www.linkedin.com/in/paolopiacenti/)
+**Crafted with dedication by:** [**Paolo Piacenti**](https://www.linkedin.com/in/paolopiacenti/), Batch #1758, Data Science and AI.
+
+**Special thanks to:** [Friedrich Hollmann](https://kitt.lewagon.com/alumni/fritzfrotz) and [Tom van Nieuwenhuyse](https://kitt.lewagon.com/alumni/tomvnh) for their inspiration and recommendations in building this bot.
 
 *Note*: The bot may provide some inaccurate answers, so please use it with caution!
 """)
