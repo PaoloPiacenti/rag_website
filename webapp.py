@@ -145,7 +145,7 @@ def display_chat():
         st.markdown(f"<div id='chat-end'></div>", unsafe_allow_html=True)
         st.markdown(f"<script>document.getElementById('chat-end').scrollIntoView();</script>", unsafe_allow_html=True)
 
-# Inject CSS for sticky input and chat bubble styling
+# Inject CSS for sticky input and chat bubble styling with dark mode support
 st.markdown("""
     <style>
     .message-row {
@@ -164,13 +164,29 @@ st.markdown("""
     }
     .user-message {
         background-color: #daf7dc;
+        color: #000; /* Ensure text is readable */
         text-align: left;
         animation: fadeIn 0.5s;
     }
     .bot-message {
         background-color: #f0f0f5;
+        color: #000; /* Ensure text is readable */
         text-align: left;
         animation: fadeIn 0.5s;
+    }
+    @media (prefers-color-scheme: dark) {
+        .user-message {
+            background-color: #2e7d32; /* Darker green for dark mode */
+            color: #fff; /* White text for contrast */
+        }
+        .bot-message {
+            background-color: #424242; /* Darker gray for dark mode */
+            color: #fff; /* White text for contrast */
+        }
+        .fixed-input {
+            background-color: #333; /* Darker input box in dark mode */
+            color: #fff; /* White text */
+        }
     }
     @keyframes fadeIn {
         0% { opacity: 0; }
@@ -187,6 +203,7 @@ st.markdown("""
     }
     </style>
     """, unsafe_allow_html=True)
+
 
 # Title
 st.title("🤖 The Bot Teaching Assistant")
